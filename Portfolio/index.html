@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="#" id="toggle-theme">Dark Mode</a>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-details">
+                <h3>ข้อมูลครอบครัว</h3>
+                <div class="info-card">
+                    <p><strong>บิดา:</strong> สมใจ บุตรชารี</p>
+                    <p><strong>อาชีพ:</strong> ค้าขาย</p>
+                    <p><strong>โทร:</strong> 0872208733</p>
+                </div>
+                <div class="info-card">
+                    <p><strong>มารดา:</strong> บุญเลิศ กุลสิงห์</p>
+                    <p><strong>อาชีพ:</strong> ค้าขาย</p>
+                    <p><strong>โทร:</strong> 0895750931</p>
+                </div>
+                <h3>ข้อมูลส่วนตัว</h3>
+                <div class="info-card">
+                    <p><strong>ชื่อ-สกุล:</strong> ภาณุวิชญ์ บุตรชารี</p>
+                    <p><strong>ชื่อเล่น:</strong> ออโต้</p>
+                    <p><strong>วัน-เดือน-ปีเกิด:</strong> 29 พฤศจิกายน 2548</p>
+                    <p><strong>อายุ:</strong> 18 ปี</p>
+                    <p><strong>สัญชาติ:</strong> ไทย</p>
+                    <p><strong>เชื้อชาติ:</strong> ไทย</p>
+                </div>
+                <h3>ความสามารถ</h3>
+                <div class="skills-card">
+                    <ul>
+                        <li>การคำนวณ</li>
+                        <li>กีฬา E-Sport</li>
+                    </ul>
+                </div>
+                <h3>งานอดิเรก</h3>
+                <div class="hobbies-card">
+                    <ul>
+                        <li>เล่นกีฬา</li>
+                        <li>ดูหนัง</li>
+                    </ul>
+                </div>
+                <h3>คติประจำใจ</h3>
+                <div class="quote-card">
+                    <p>ทะเลที่สงบไม่สามารถสร้างนักเดินทางที่ยิ่งใหญ่</p>
+                </div>
+            </div>
+            <img src="1.jpg" alt="My Photo" class="profile-photo">
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>ประถมศึกษา : โรงเรียนบ้านหนองตุ</h3>
+            <center><img src="2.jpg" width="200" height="200" /></center>
+        </div>
+        <div class="education-item">
+            <h3>มัธยมศึกษา : โรงเรียนประจักษ์ศิลปาคาร</h3>
+            <center><img src="3.jpg" width="200" height="200" /></center>
+        </div>
+        <div class="education-item">
+            <h3>มหาวิทยาลัย : มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</h3>
+            <center><img src="4.png" width="200" height="200" /></center>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>สถานีตรวจวัดอากาศเคลื่อนที่</h3>
+            <p>โปรเจคนี้เกี่ยวกับการสร้างสถานีตรวจวัดอากาศที่สามารถเคลื่อนที่ได้เพื่อเก็บข้อมูลสภาพอากาศในพื้นที่ต่างๆ</p>
+            <p><strong>เทคโนโลยีที่ใช้:</strong> Arduino, Sensor, C Programming</p>
+            <p><strong>รางวัล:</strong> เหรียญเงินของการประกวดโครงงานระดับภาค</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <p><strong>Email:</strong>auto0885712104@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Phone:</strong> 0985867833</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=100014172439081">Phanuwit Butcharee</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggleThemeButton = document.getElementById('toggle-theme');
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('header').classList.toggle('dark-mode');
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.toggle('dark-mode');
+            });
+            document.querySelectorAll('.info-card, .skills-card, .hobbies-card, .quote-card').forEach(card => {
+                card.classList.toggle('dark-mode');
+            });
+            document.querySelectorAll('.education-item').forEach(item => {
+                item.classList.toggle('dark-mode');
+            });
+            document.querySelectorAll('.project').forEach(project => {
+                project.classList.toggle('dark-mode');
+            });
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.toggle('dark-mode');
+            });
+        });
+    </script>
+</body>
+</html>
